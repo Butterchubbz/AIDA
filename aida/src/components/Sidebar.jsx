@@ -1,7 +1,7 @@
 // src/components/Sidebar.js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import logoUrl from '../assets/AIDA-logo.png'; // FIX: Asset is missing, commented out for now.
+import logoUrl from '../assets/AIDA-logo.svg';
 
 // A reusable NavLink component for the sidebar for better styling and consistency
 const SidebarLink = ({ to, icon, children }) => (

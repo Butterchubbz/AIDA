@@ -2,18 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-// import AmazonView from '@/components/AmazonView'; // FIX: Component not found
-// import ManualForecastingView from '@/components/ManualForecastingView'; // FIX: Component not found
 import DashboardView from '@/components/DashboardView'; // Import DashboardView
 
 // NEW: Import generic views for dynamic routing
 import InventoryView from '@/views/InventoryView';
-// import ForecastingView from '@/views/ForecastingView'; // FIX: Component not found
 import InboundShipmentView from '@/views/InboundShipmentView'; // Import from views
 import RMATrackerView from '@/views/RMATrackerView'; // Import from views
 
-// import AmazonProcessingView from '@/components/AmazonProcessingView'; // FIX: Component not found
-// import AmazonOutgoingView from '@/components/AmazonOutgoingView'; // FIX: Component not found
 import ProfileView from '@/views/ProfileView'; // New Profile View
 import UserManagementView from '@/views/UserManagementView'; // New User Management View
 import DataManagementView from '@/views/DataManagementView';
@@ -79,11 +74,6 @@ function App() {
                     <Route path="/dashboard" element={<DashboardView />} />
                     {/* DYNAMIC ROUTES */}
                     <Route path="/inventory/:collectionName" element={<InventoryView />} />
-                    {/* <Route path="/forecasting/:collectionName" element={<ForecastingView />} /> */}
-                    {/* <Route path="/amazon/overview" element={<AmazonView userRole={userRole} />} /> */}
-                    {/* <Route path="/amazon/processing" element={<AmazonProcessingView />} /> */}
-                    {/* <Route path="/amazon/outgoing" element={<AmazonOutgoingView />} /> */}
-                    {/* <Route path="/forecasting/manual" element={<ManualForecastingView />} /> */}
                     <Route path="/rma-tracking" element={<RMATrackerView />} />
                     <Route path="/inbound-shipments" element={<InboundShipmentView />} />
                     <Route path="/profile" element={<ProfileView />} />

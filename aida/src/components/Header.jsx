@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Auth from '@/components/Auth';
-// import logoUrl from '../assets/AIDA-logo.png'; // FIX: Asset is missing, commented out for now.
+import logoUrl from '../assets/AIDA-logo.svg';
 
 /**
  * Header component for AIDA (Accurate Inventory Data Assistant).

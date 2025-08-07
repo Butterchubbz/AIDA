@@ -1,33 +1,44 @@
-# AIDA Launcher
+# AIDA (Accurate Inventory Data Assistant)
 
-AIDA Launcher is a standalone application designed to check for installed dependencies, perform first-time setup, and manage the status of PocketBase and AIDA. The application runs in the background and launches AIDA in a web browser after completing the setup.
+AIDA is a web-based inventory management system powered by PocketBase. This document provides instructions for setting up and running the application using the provided scripts.
 
-## Features
+## Quick Start
 
-- Checks for required dependencies and installs them if necessary.
-- Verifies if the first-time setup has been completed and performs it if not.
-- Displays the status of PocketBase with options for rebooting.
-- Launches AIDA in the default web browser after setup.
+### For Windows Users
 
-## Installation
+1.  **Run the setup script:** Double-click on `setup.bat`. This will check for necessary dependencies and install all required packages. Please follow any on-screen instructions.
+2.  **Run the application:** Double-click on `start.bat`. This will launch the backend and frontend services.
+3.  **Access AIDA:** Open your web browser and navigate to `http://localhost:5174`.
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd aida-launcher
-   ```
+### For macOS and Linux Users
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+1.  **Run the setup script:**
+    ```bash
+    ./setup.sh
+    ```
+    This will check for necessary dependencies and install all required packages.
 
-## Usage
+2.  **Run the application:**
+    ```bash
+    ./start.sh
+    ```
+    This will launch the backend and frontend services.
 
-To run the application, execute the following command:
-```bash
-npm start
-```
+3.  **Access AIDA:** Open your web browser and navigate to `http://localhost:5174`.
+
+## First-Time Setup
+
+The first time you run AIDA, you will be guided through a setup wizard in your browser. This will involve:
+1.  Creating an initial admin user account for PocketBase.
+2.  Configuring your inventory locations.
+3.  Selecting optional modules like RMA tracking and inbound shipments.
+
+The application will create the necessary database collections based on your choices.
+
+## Stopping the Application
+
+-   **Windows:** Close the two terminal windows that were opened by `start.bat`.
+-   **macOS/Linux:** Press `Ctrl+C` in the terminal where you ran `./start.sh`.
 
 ## Contributing
 
